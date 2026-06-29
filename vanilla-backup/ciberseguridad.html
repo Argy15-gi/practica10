@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackCat Cibersecurity - Portal de Ciberseguridad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="ciberseguridad-page">
+    <!-- Matrix Effect Background -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <nav class="navbar navbar-dark">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <a href="index.html">BlackCat Cibersecurity</a>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="ciberseguridad.html" class="active"><i class="fas fa-lock"></i> Ciberseguridad</a></li>
+                <li><a href="#amenazas"><i class="fas fa-bug"></i> Amenazas</a></li>
+                <li><a href="#herramientas"><i class="fas fa-toolbox"></i> Herramientas</a></li>
+                <li><a href="#recursos"><i class="fas fa-book"></i> Recursos</a></li>
+                <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="cyber-header">
+        <div class="cyber-header-content">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="terminal-title">root@blackcat:~</span>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="prompt">$</span> iniciando_sistema_seguridad...</p>
+                    <p><span class="prompt">$</span> cargando_modulos_proteccion...</p>
+                    <p><span class="prompt">$</span> acceso_concedido</p>
+                    <p class="typing-line"><span class="prompt">$</span> bienvenido_al_portal_de_ciberseguridad</p>
+                </div>
+            </div>
+            <h1>Portal de Ciberseguridad</h1>
+            <p class="subtitle">Conocimiento, herramientas y recursos para la defensa digital</p>
+        </div>
+        <div class="cyber-stats">
+            <div class="cyber-stat">
+                <i class="fas fa-virus"></i>
+                <span class="counter" data-target="847">0</span>
+                <p>Amenazas Detectadas Hoy</p>
+            </div>
+            <div class="cyber-stat">
+                <i class="fas fa-shield-alt"></i>
+                <span class="counter" data-target="156">0</span>
+                <p>Ataques Bloqueados</p>
+            </div>
+            <div class="cyber-stat">
+                <i class="fas fa-lock"></i>
+                <span class="counter" data-target="99.9">0</span>
+                <p>% de Protección</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="amenazas" class="amenazas-section">
+        <div class="container">
+            <div class="section-header dark">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h2>Tipos de Amenazas</h2>
+                <p>Conoce los principales vectores de ataque en el ciberespacio</p>
+            </div>
+            <div class="amenazas-grid">
+                <div class="amenaza-card">
+                    <div class="amenaza-icon malware">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Malware</h3>
+                    <p>Software malicioso diseñado para dañar, infiltrarse o dañar sistemas informáticos.</p>
+                    <ul>
+                        <li>Virus</li>
+                        <li>Troyanos</li>
+                        <li>Ransomware</li>
+                        <li>Spyware</li>
+                    </ul>
+                    <div class="nivel-riesgo">
+                        <span>Nivel de Riesgo:</span>
+                        <div class="riesgo-bar">
+                            <div class="riesgo-fill alto"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="amenaza-card">
+                    <div class="amenaza-icon phishing">
+                        <i class="fas fa-fishing"></i>
+                    </div>
+                    <h3>Phishing</h3>
+                    <p>Técnicas de engaño para obtener información confidencial haciéndose pasar por entidades de confianza.</p>
+                    <ul>
+                        <li>Spear Phishing</li>
+                        <li>Whaling</li>
+                        <li>Smishing</li>
+                        <li>Vishing</li>
+                    </ul>
+                    <div class="nivel-riesgo">
+                        <span>Nivel de Riesgo:</span>
+                        <div class="riesgo-bar">
+                            <div class="riesgo-fill alto"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="amenaza-card">
+                    <div class="amenaza-icon ddos">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>DDoS</h3>
+                    <p>Ataques de denegación de servicio distribuidos que saturan sistemas para hacerlos inaccesibles.</p>
+                    <ul>
+                        <li>Volumétricos</li>
+                        <li>Protocolo</li>
+                        <li>Aplicación</li>
+                        <li>Amplificación</li>
+                    </ul>
+                    <div class="nivel-riesgo">
+                        <span>Nivel de Riesgo:</span>
+                        <div class="riesgo-bar">
+                            <div class="riesgo-fill medio"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="amenaza-card">
+                    <div class="amenaza-icon sql">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Inyección SQL</h3>
+                    <p>Aprovechamiento de vulnerabilidades en bases de datos mediante código malicioso SQL.</p>
+                    <ul>
+                        <li>SQLi Clásico</li>
+                        <li>Blind SQLi</li>
+                        <li>Union Based</li>
+                        <li>Error Based</li>
+                    </ul>
+                    <div class="nivel-riesgo">
+                        <span>Nivel de Riesgo:</span>
+                        <div class="riesgo-bar">
+                            <div class="riesgo-fill critico"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="amenaza-card">
+                    <div class="amenaza-icon xss">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>XSS</h3>
+                    <p>Cross-Site Scripting permite inyectar scripts maliciosos en páginas web vistas por otros usuarios.</p>
+                    <ul>
+                        <li>Reflejado</li>
+                        <li>Almacenado</li>
+                        <li>DOM Based</li>
+                        <li>Self-XSS</li>
+                    </ul>
+                    <div class="nivel-riesgo">
+                        <span>Nivel de Riesgo:</span>
+                        <div class="riesgo-bar">
+                            <div class="riesgo-fill medio"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="amenaza-card">
+                    <div class="amenaza-icon mitm">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Man in the Middle</h3>
+                    <p>Ataques donde el atacante intercepta y posiblemente altera la comunicación entre dos partes.</p>
+                    <ul>
+                        <li>ARP Spoofing</li>
+                        <li>DNS Spoofing</li>
+                        <li>SSL Stripping</li>
+                        <li>Session Hijacking</li>
+                    </ul>
+                    <div class="nivel-riesgo">
+                        <span>Nivel de Riesgo:</span>
+                        <div class="riesgo-bar">
+                            <div class="riesgo-fill alto"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="red-team" class="team-section red-section">
+        <div class="team-bg" style="background-image: url('imagenes/red%20team%20fondo.png')"></div>
+        <div class="container">
+            <div class="team-content">
+                <div class="team-badge">
+                    <i class="fas fa-fire"></i>
+                    <span>OFENSIVO</span>
+                </div>
+                <h2>Red Team Operations</h2>
+                <p class="team-description">Simulación de ataques reales para identificar vulnerabilidades antes que los ciberdelincuentes. Nuestro equipo rojo utiliza las mismas técnicas que los hackers maliciosos, pero éticamente y con tu permiso.</p>
+
+                <div class="services-detail">
+                    <div class="service-item">
+                        <i class="fas fa-search"></i>
+                        <h4>Reconocimiento</h4>
+                        <p>Recopilación de información sobre el objetivo</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-crosshairs"></i>
+                        <h4>Explotación</h4>
+                        <p>Aprovechamiento de vulnerabilidades encontradas</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-user-ninja"></i>
+                        <h4>Post-Explotación</h4>
+                        <p>Movimiento lateral y persistencia</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-file-alt"></i>
+                        <h4>Reporting</h4>
+                        <p>Documentación detallada de hallazgos</p>
+                    </div>
+                </div>
+
+                <div class="tools-used">
+                    <h4>Herramientas Utilizadas:</h4>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Metasploit</span>
+                        <span class="tool-tag">Cobalt Strike</span>
+                        <span class="tool-tag">Burp Suite</span>
+                        <span class="tool-tag">Nmap</span>
+                        <span class="tool-tag">BloodHound</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blue-team" class="team-section blue-section">
+        <div class="team-bg" style="background-image: url('imagenes/blue%20team%20fondo.png')"></div>
+        <div class="container">
+            <div class="team-content">
+                <div class="team-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>DEFENSIVO</span>
+                </div>
+                <h2>Blue Team Defense</h2>
+                <p class="team-description">Protección continua y respuesta a incidentes. Nuestro equipo azul se encarga de defender tu infraestructura, detectar amenazas y responder ante incidentes de seguridad.</p>
+
+                <div class="services-detail">
+                    <div class="service-item">
+                        <i class="fas fa-eye"></i>
+                        <h4>Monitoreo 24/7</h4>
+                        <p>Vigilancia continua de sistemas</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-search-dollar"></i>
+                        <h4>Threat Hunting</h4>
+                        <p>Búsqueda proactiva de amenazas</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-first-aid"></i>
+                        <h4>Incident Response</h4>
+                        <p>Respuesta y remediación de incidentes</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h4>Hardening</h4>
+                        <p>Fortalecimiento de sistemas</p>
+                    </div>
+                </div>
+
+                <div class="tools-used">
+                    <h4>Herramientas Utilizadas:</h4>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Splunk</span>
+                        <span class="tool-tag">Wazuh</span>
+                        <span class="tool-tag">Suricata</span>
+                        <span class="tool-tag">YARA</span>
+                        <span class="tool-tag">Velociraptor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="purple-team" class="team-section purple-section">
+        <div class="team-bg" style="background-image: url('imagenes/purple%20team%20fondo.png')"></div>
+        <div class="container">
+            <div class="team-content">
+                <div class="team-badge">
+                    <i class="fas fa-handshake"></i>
+                    <span>COLABORATIVO</span>
+                </div>
+                <h2>Purple Team Integration</h2>
+                <p class="team-description">La sinergia perfecta entre ataque y defensa. El equipo púrpura combina las capacidades de Red y Blue Team para maximizar la efectividad de la seguridad organizacional.</p>
+
+                <div class="services-detail">
+                    <div class="service-item">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h4>Simulacros</h4>
+                        <p>Ejercicios controlados de ataque/defensa</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Métricas</h4>
+                        <p>Medición de efectividad defensiva</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-sync"></i>
+                        <h4>Feedback Loop</h4>
+                        <p>Mejora continua bidireccional</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Training</h4>
+                        <p>Capacitación conjunta de equipos</p>
+                    </div>
+                </div>
+
+                <div class="tools-used">
+                    <h4>Herramientas Utilizadas:</h4>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Atomic Red Team</span>
+                        <span class="tool-tag">MITRE ATT&CK</span>
+                        <span class="tool-tag">Caldera</span>
+                        <span class="tool-tag">Prelude</span>
+                        <span class="tool-tag">Vectra</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consultoria" class="consultoria-section">
+        <div class="container">
+            <div class="section-header dark">
+                <i class="fas fa-clipboard-list"></i>
+                <h2>Consultoría y Cumplimiento</h2>
+                <p>Auditorías, certificaciones y gestión de riesgos</p>
+            </div>
+            <div class="consultoria-grid">
+                <div class="consultoria-item">
+                    <i class="fas fa-check-square"></i>
+                    <h3>ISO 27001</h3>
+                    <p>Implementación y auditoría de Sistemas de Gestión de Seguridad de la Información</p>
+                </div>
+                <div class="consultoria-item">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>GDPR / Protección de Datos</h3>
+                    <p>Cumplimiento normativo en protección de datos personales</p>
+                </div>
+                <div class="consultoria-item">
+                    <i class="fas fa-shield-virus"></i>
+                    <h3>Pentesting</h3>
+                    <p>Pruebas de penetración de redes, aplicaciones y sistemas</p>
+                </div>
+                <div class="consultoria-item">
+                    <i class="fas fa-search"></i>
+                    <h3>Auditoría de Código</h3>
+                    <p>Revisión de seguridad en desarrollo de software</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recursos" class="recursos-section">
+        <div class="container">
+            <div class="section-header dark">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Recursos de Aprendizaje</h2>
+                <p>Material educativo para profesionales de seguridad</p>
+            </div>
+            <div class="recursos-grid">
+                <div class="recurso-card">
+                    <div class="recurso-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Documentación</h3>
+                    <ul>
+                        <li><a href="#">OWASP Top 10</a></li>
+                        <li><a href="#">MITRE ATT&CK Framework</a></li>
+                        <li><a href="#">NIST Cybersecurity Framework</a></li>
+                        <li><a href="#">CIS Controls</a></li>
+                    </ul>
+                </div>
+                <div class="recurso-card">
+                    <div class="recurso-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Laboratorios</h3>
+                    <ul>
+                        <li><a href="#">Hack The Box</a></li>
+                        <li><a href="#">TryHackMe</a></li>
+                        <li><a href="#">VulnHub</a></li>
+                        <li><a href="#">OverTheWire</a></li>
+                    </ul>
+                </div>
+                <div class="recurso-card">
+                    <div class="recurso-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificaciones</h3>
+                    <ul>
+                        <li><a href="#">CEH - Certified Ethical Hacker</a></li>
+                        <li><a href="#">OSCP - Offensive Security</a></li>
+                        <li><a href="#">CISSP - ISC2</a></li>
+                        <li><a href="#">CompTIA Security+</a></li>
+                    </ul>
+                </div>
+                <div class="recurso-card">
+                    <div class="recurso-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Comunidad</h3>
+                    <ul>
+                        <li><a href="#">Foros de Seguridad</a></li>
+                        <li><a href="#">Grupos de Discord</a></li>
+                        <li><a href="#">Meetups Locales</a></li>
+                        <li><a href="#">CTF Competitions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="herramientas" class="herramientas-section">
+        <div class="container">
+            <div class="section-header dark">
+                <i class="fas fa-toolbox"></i>
+                <h2>Kit de Herramientas Esenciales</h2>
+                <p>Software profesional para operaciones de seguridad</p>
+            </div>
+            <div class="herramientas-categorias">
+                <div class="herramienta-cat">
+                    <h4><i class="fas fa-terminal"></i> Escaneo y Enumeración</h4>
+                    <div class="herramientas-tags">
+                        <span class="herramienta-tag">Nmap</span>
+                        <span class="herramienta-tag">Masscan</span>
+                        <span class="herramienta-tag">Rustscan</span>
+                        <span class="herramienta-tag">Recon-ng</span>
+                    </div>
+                </div>
+                <div class="herramienta-cat">
+                    <h4><i class="fas fa-bug"></i> Exploit y Pentesting</h4>
+                    <div class="herramientas-tags">
+                        <span class="herramienta-tag">Metasploit</span>
+                        <span class="herramienta-tag">Cobalt Strike</span>
+                        <span class="herramienta-tag">Sliver</span>
+                        <span class="herramienta-tag">Empire</span>
+                    </div>
+                </div>
+                <div class="herramienta-cat">
+                    <h4><i class="fas fa-search"></i> Análisis Web</h4>
+                    <div class="herramientas-tags">
+                        <span class="herramienta-tag">Burp Suite</span>
+                        <span class="herramienta-tag">OWASP ZAP</span>
+                        <span class="herramienta-tag">SQLMap</span>
+                        <span class="herramienta-tag">Nikto</span>
+                    </div>
+                </div>
+                <div class="herramienta-cat">
+                    <h4><i class="fas fa-eye"></i> Monitoreo</h4>
+                    <div class="herramientas-tags">
+                        <span class="herramienta-tag">Splunk</span>
+                        <span class="herramienta-tag">Wazuh</span>
+                        <span class="herramienta-tag">Suricata</span>
+                        <span class="herramienta-tag">Zeek</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto contacto-dark">
+        <div class="container">
+            <div class="section-header dark">
+                <i class="fas fa-headset"></i>
+                <h2>¿Necesitas ayuda urgente?</h2>
+                <p>Contáctanos para una consulta de seguridad inmediata</p>
+            </div>
+            <div class="emergency-contact">
+                <div class="emergency-card">
+                    <i class="fas fa-phone-volume"></i>
+                    <h3>Línea de Emergencia</h3>
+                    <p class="emergency-number">+591 12345678</p>
+                    <p>Disponible 24/7 para incidentes críticos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer footer-cyber">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>BlackCat Cibersecurity</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="ciberseguridad.html">Ciberseguridad</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2026 BlackCat Ciberseguridad. Todos los derechos reservados.</p>
+            <p class="footer-security">
+                <i class="fas fa-lock"></i> Conexión Segura |
+                <i class="fas fa-shield-alt"></i> Protegido por BlackCat
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Efecto Matrix
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+        const matrixChars = matrix.split("");
+
+        const fontSize = 10;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+
+        for(let x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0F0';
+            ctx.font = fontSize + 'px monospace';
+
+            for(let i = 0; i < drops.length; i++) {
+                const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 35);
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Contadores animados
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const target = parseFloat(counter.getAttribute('data-target'));
+            const isDecimal = target % 1 !== 0;
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.innerText = isDecimal ? current.toFixed(1) : Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            // Iniciar cuando sea visible
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateCounter();
+                        observer.unobserve(counter);
+                    }
+                });
+            });
+            observer.observe(counter);
+        });
+
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

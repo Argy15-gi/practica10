@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATA</title>
+    <ul id="listado"></ul>
+    <input type="text" id="busqueda" placeholder="Buscar producto">
+    <button onclick="buscarProducto()">Buscar</button>
+    
+</head>
+<body>
+        <sccript>
+            const productonombre= [{producto: "cafe", precio: 1000}, {producto: "te", precio: 500}, {producto: "leche",
+            precio: 1500}];
+            const html1=productonombre.filter(p=> `<li>${p.producto}: ${p.precio} bs.</li>`).join(" ");
+            console.log(html1);
+            document.getElementById("listado").innerHTML=html1;
+            document.getElementById("busqueda").addEventListener("input", buscarProducto);
+            let nombre=document.getElementById("busqueda").value;
+            document.getElementById("listado").innerHTML=productonombre.filter(p=> p.producto.includes(nombre)).map(p=> `<li>${p.producto}: ${p.precio} bs.</li>`).join(" ");
+            function buscarProducto()
+
+    </ul>
+
+</body>
+</html>
